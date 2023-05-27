@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "git-tag",
+    "conventional-commits"
+  ],
+  "owner": "jishnupsamal",
+  "repo": "Innovate",
+  "name": "jishnupsamal",
+  "email": "jishnuprs20@gmail.com",
+  "onlyPublishWithReleaseLabel": true
+}

@@ -4,8 +4,9 @@
   "description": "Innovate Design System",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6000",
+    "chromatic": "npx chromatic",
+    "auto": "auto version",
     "build-storybook": "storybook build"
   },
   "keywords": [
@@ -13,9 +14,13 @@
     "design",
     "system"
   ],
-  "author": "Jishnu Prasad Samal <design@jishnupsamal.ml>",
+  "author": {
+    "name": "Jishnu Prasad Samal",
+    "email": "dev@jishnupsamal.ml"
+  },
   "license": "ISC",
   "devDependencies": {
+    "@auto-it/conventional-commits": "^10.46.0",
     "@auto-it/git-tag": "^10.46.0",
     "@storybook/addon-essentials": "^7.0.18",
     "@storybook/addon-interactions": "^7.0.18",
@@ -24,6 +29,7 @@
     "@storybook/react": "^7.0.18",
     "@storybook/react-vite": "^7.0.18",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "auto": "^10.46.0",
     "chromatic": "^6.17.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -31,6 +37,8 @@
     "storybook": "^7.0.18"
   },
   "dependencies": {
-    "auto": "^10.46.0"
-  }
+    "vite": "^4.3.9"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "innovate@1.0.0"
 }
