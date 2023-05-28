@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "module": "ES6",
+        "outDir": "out",
+        "target": "ES6",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+    },
+    // "files": ["*.ts", "*.tsx"],
+    "include": ["./stories/", "./.storybook/", "./declaration.d.ts"]
+}

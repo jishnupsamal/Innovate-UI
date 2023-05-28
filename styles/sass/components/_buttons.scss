@@ -1,0 +1,43 @@
+@use '../abstract/variables' as var;
+@use '../abstract/mixins' as mx;
+@use '../abstract/animations' as anim;
+@use "sass:map";
+
+@keyframes spinner {
+    0% {}
+    25% {}
+    50% {}
+    75% {}
+    100% {}
+}
+
+@keyframes s3{ 
+    100%{transform: rotate(1turn)}
+}
+
+.button {
+    display: block;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 0.8rem 1.5rem;
+
+    @each $color, $value in map.get(var.$button-colors, text-dark) {
+        &_#{$color} {
+            @include mx.button($value);
+        }
+    }
+
+    @each $color, $value in map.get(var.$button-colors, text-light) {
+        &_#{$color} {
+            @include mx.button($value, var.$light);
+        }
+    }
+
+    &_icon {
+        &_left, &_right {
+            display: inline-block,
+        }
+
+    }
+}

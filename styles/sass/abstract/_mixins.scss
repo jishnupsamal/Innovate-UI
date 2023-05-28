@@ -1,0 +1,54 @@
+@use './variables' as var;
+
+// @mixin solid-button($value, $text: var.$dark) {
+//     @extend .button;
+//     background-color: $value;
+//     color: $text;
+//     &:hover {
+//         transition: background-color ease-in-out 500ms;
+//         background-color: scale-color($color: $value, $lightness: -10%);
+//     }
+// }
+
+@mixin button($value: var.$primary, $text: var.$dark) {
+    @extend .button;
+    background-color: $value;
+    color: $text;
+    &:hover {
+        transition: background-color ease-in-out 500ms;
+        background-color: scale-color($color: $value, $lightness: -10%);
+    }
+
+    &:active {
+        transition: background-color ease-in-out 500ms;
+        background-color: scale-color($color: $value, $lightness: -80%); 
+    }
+
+    &:disabled {
+        background-color: scale-color($color: $value, $lightness: 90%);
+        color: scale-color($color: var.$dark, $lightness: 50%);
+    }
+
+    &_outline {
+        @extend .button;
+        color: $value;
+        border: 1px solid $value;
+        background-color: transparent;
+        // font-size: 15px;
+        &:hover {
+            transition: background-color ease-in-out 500ms;
+            background-color: scale-color($color: $value, $lightness: 95%);
+        }
+
+        &:active {
+            transition: background-color ease-in-out 500ms;
+            background-color: scale-color($color: $value, $lightness: -50%); 
+        }
+
+        &:disabled {
+            color: scale-color($color: $value, $lightness: 60%);
+            border: 1px solid scale-color($color: $value, $lightness: 60%);
+            background-color: transparent;
+        }
+    }
+}

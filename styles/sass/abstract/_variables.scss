@@ -1,0 +1,27 @@
+/*
+    Colors
+    https://coolors.co/d72638-3f88c5-f49d37-140f2d-f22b29
+*/
+$primary: #F49D37; // Black
+$secondary: #140f2d; // White
+$tertiary: #3F88C5; // 
+$accent: #70C1B3; // Black
+$dark: black; // White
+$light: #FFFFFF; // Black
+$danger: red;
+$success: #00FF7F;
+$gray: gray;
+
+$button-colors: (
+    'text-dark': (
+        'primary': $primary,
+        'accent': $accent,
+        // 'light': $light,
+    ),
+    'text-light': (
+        'secondary': $secondary,
+        'dark': $dark,
+        'danger': $danger,
+        'success': $success,
+    ),
+);

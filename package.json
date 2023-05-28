@@ -1,13 +1,14 @@
 {
-  "name": "innovate",
+  "name": "innovate-ui",
   "version": "1.0.0",
   "description": "Innovate Design System",
   "main": "index.js",
   "scripts": {
-    "storybook": "storybook dev -p 6000",
+    "storybook": "storybook dev -p 6006",
     "chromatic": "npx chromatic",
-    "auto": "auto version",
-    "build-storybook": "storybook build"
+    "release": "auto shipit",
+    "build-storybook": "storybook build",
+    "sass": "sass styles/style.module.scss styles/style.module.css -w"
   },
   "keywords": [
     "innovate",
@@ -25,18 +26,26 @@
     "@storybook/addon-essentials": "^7.0.18",
     "@storybook/addon-interactions": "^7.0.18",
     "@storybook/addon-links": "^7.0.18",
+    "@storybook/addon-styling": "^1.0.8",
     "@storybook/blocks": "^7.0.18",
+    "@storybook/manager-api": "^7.0.18",
     "@storybook/react": "^7.0.18",
     "@storybook/react-vite": "^7.0.18",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/theming": "^7.0.18",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
     "auto": "^10.46.0",
     "chromatic": "^6.17.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sass": "^1.62.1",
     "storybook": "^7.0.18"
   },
   "dependencies": {
+    "@storybook/addon-a11y": "^7.0.18",
+    "react-icons": "^4.8.0",
     "vite": "^4.3.9"
   },
   "readme": "ERROR: No README data found!",
