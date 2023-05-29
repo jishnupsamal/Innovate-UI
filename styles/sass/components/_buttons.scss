@@ -1,19 +1,7 @@
 @use '../abstract/variables' as var;
 @use '../abstract/mixins' as mx;
-@use '../abstract/animations' as anim;
+// @use '../abstract/animations' as anim;
 @use "sass:map";
-
-@keyframes spinner {
-    0% {}
-    25% {}
-    50% {}
-    75% {}
-    100% {}
-}
-
-@keyframes s3{ 
-    100%{transform: rotate(1turn)}
-}
 
 .button {
     display: block;

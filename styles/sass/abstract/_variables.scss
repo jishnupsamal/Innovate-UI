@@ -1,7 +1,3 @@
-/*
-    Colors
-    https://coolors.co/d72638-3f88c5-f49d37-140f2d-f22b29
-*/
 $primary: #F49D37; // Black
 $secondary: #140f2d; // White
 $tertiary: #3F88C5; // 
@@ -16,7 +12,7 @@ $button-colors: (
     'text-dark': (
         'primary': $primary,
         'accent': $accent,
-        // 'light': $light,
+        'light': $light,
     ),
     'text-light': (
         'secondary': $secondary,
@@ -25,3 +21,10 @@ $button-colors: (
         'success': $success,
     ),
 );
+
+$breakpoints: (
+    'xs': 576px,
+    's': 768px,
+    'm': 992px,
+    'l': 1200px,
+)

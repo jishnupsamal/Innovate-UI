@@ -1,7 +1,5 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
-import { IconType } from 'react-icons';
-import { FaReact } from 'react-icons/fa';
 import * as style from '../../styles/style.module.scss';
 
 /**
@@ -31,8 +29,8 @@ export const Button: React.FC<ButtonProps> = ({ type, outline, label, LeftIcon, 
     case 'danger':
       typeClass = outline == true ? `${style.button_danger_outline}` : `${style.button_danger}`
       break;
-    // case 'icon':
-    //   typeClass = outline == true ? `${style.button_icon_outline}` : `${style.button_icon}`
+    case 'light':
+      typeClass = outline == true ? `${style.button_light_outline}` : `${style.button_light}`
       break;
     default:
       typeClass = undefined
@@ -41,15 +39,20 @@ export const Button: React.FC<ButtonProps> = ({ type, outline, label, LeftIcon, 
   return (
     <button
       className={`${typeClass}`}
+      role='button'
+      aria-aria-disabled={isDisabled || isLoading}
       disabled={isDisabled || isLoading}
+      aria-label={label}
+      aria-labelledby={label}
+      title={label}
       {...props}
     >
       {LeftIcon? (
-        <div className={`${style.button_icon_left}`}>
+        <div>
           {!isLoading ? (<span>{LeftIcon} {label}</span> ): 'Loading...'}
         </div>
       ): (
-        <div className={`${style.button_icon_reft}`}>
+        <div>
           {!isLoading ? (<span>{label} {RightIcon}</span> ): 'Loading...'}
         </div>
       )}
@@ -58,7 +61,7 @@ export const Button: React.FC<ButtonProps> = ({ type, outline, label, LeftIcon, 
 };
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['primary', 'secondary', 'accent', 'dark', 'success', 'danger']),
+  type: PropTypes.oneOf(['primary', 'secondary', 'accent', 'dark', 'light', 'success', 'danger']),
   outline: PropTypes.bool.isRequired,
   isDisabled: PropTypes.bool.isRequired,
   LeftIcon: PropTypes.object.isRequired,

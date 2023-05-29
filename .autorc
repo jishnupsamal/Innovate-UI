@@ -1,6 +1,7 @@
 {
   "plugins": [
     "git-tag",
+    "npm",
     "conventional-commits"
   ],
   "owner": "jishnupsamal",

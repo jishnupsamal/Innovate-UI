@@ -1,0 +1,12 @@
+@use '../abstract/variables' as var;
+@use '../abstract/mixins' as mx;
+
+.grid {
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 1rem 1rem;
+    &_item {
+        background-color: var.$primary;
+        padding: 2rem;
+    }
+}

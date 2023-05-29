@@ -18,7 +18,7 @@ const iconMapping: object = {
 }
 
 const meta: Meta = {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {
@@ -26,7 +26,7 @@ const meta: Meta = {
     type: {
       name: 'Type',
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'accent', 'dark', 'success', 'danger'],
+      options: ['primary', 'secondary', 'accent', 'dark', 'light', 'success', 'danger'],
       description: 'Type of the button',
       defaultValue: 'primary',
     },
@@ -106,6 +106,14 @@ export const Accent = {
 export const Dark = {
   args: {
     type: 'dark',
+    label: 'Button',
+    outline: false,
+  },
+};
+
+export const Light = {
+  args: {
+    type: 'light',
     label: 'Button',
     outline: false,
   },
